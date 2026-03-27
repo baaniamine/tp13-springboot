@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TP13 OAuth2</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <span class="eyebrow">OAuth2 Access</span>
+        <h1>Login</h1>
+        <p class="lead">Choose your identity provider to start the authorization flow.</p>
+
+        <div class="login-options">
+            <a th:href="@{/oauth2/authorization/google}" class="btn btn-google">
+                Continue with Google
+            </a>
+        </div>
+
+        <a th:href="@{/}" class="back-link">Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

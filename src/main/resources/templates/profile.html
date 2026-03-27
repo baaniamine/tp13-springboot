@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - TP13 OAuth2</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <span class="eyebrow">Authenticated Session</span>
+        <h1>User Profile</h1>
+        <p class="lead">Claims below are extracted from the OpenID Connect identity token returned by Google.</p>
+
+        <div class="profile-card">
+            <div th:if="${picture != null}" class="photo-wrapper">
+                <img th:src="${picture}" alt="Profile Photo" class="profile-photo"/>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Name</span>
+                <span class="value" th:text="${name}">Unknown</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Email</span>
+                <span class="value" th:text="${email}">Unknown</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a th:href="@{/}" class="btn">Home</a>
+            <a th:href="@{/logout}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

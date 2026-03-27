@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP13 - OAuth2 Demo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <span class="eyebrow">Spring Security Lab</span>
+        <h1>OAuth2 Authentication</h1>
+        <p class="lead">Sign in with Google and inspect the OpenID Connect profile returned by Spring Security.</p>
+
+        <div class="status-panel" sec:authorize="isAuthenticated()">
+            <p class="success">Session active</p>
+            <p>Your account is authenticated. You can open the profile page or close the session.</p>
+            <div class="actions">
+                <a th:href="@{/profile}" class="btn">My Profile</a>
+                <a th:href="@{/logout}" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+
+        <div class="status-panel" sec:authorize="isAnonymous()">
+            <p>Please log in to access protected resources.</p>
+            <div class="actions">
+                <a th:href="@{/login}" class="btn">Open Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
