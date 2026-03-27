@@ -7,6 +7,10 @@ OAuth2 / OpenID Connect login using Google and Keycloak as Identity Providers.
 - Set `GOOGLE_CLIENT_ID` in your local environment
 - Set `GOOGLE_CLIENT_SECRET` in your local environment
 - Register this redirect URI in Google Cloud: `http://localhost:8080/login/oauth2/code/google`
+## tests 
+<img width="1911" height="820" alt="image" src="https://github.com/user-attachments/assets/94d798ee-6622-4777-aff6-fcab788ec553" />
+<img width="1895" height="765" alt="image" src="https://github.com/user-attachments/assets/eaea5e6a-88af-455b-ab4a-9a313b4cdcde" />
+<img width="1899" height="797" alt="image" src="https://github.com/user-attachments/assets/885574da-4bca-4c4f-8942-a47fd44641a9" />
 
 ## Run the application
 ```bash
